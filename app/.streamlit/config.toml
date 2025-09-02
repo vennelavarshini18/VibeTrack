@@ -1,0 +1,8 @@
+[theme]
+base = "dark"                 
+primaryColor = "#06B6D4"               
+backgroundColor = "#F9FAFB"         
+secondaryBackgroundColor = "#E2E8F0"  
+textColor = "#111827"              
+font = "Inter, Poppins, or Nunito"  
+ 
