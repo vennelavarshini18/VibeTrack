@@ -1,4 +1,4 @@
-# 🎧 VibeTrack: Track Your Mood
+# VibeTrack: Track Your Mood
 
 **VibeTrack** is a deep learning–powered web application that detects your **inner emotional state** from your **voice** — either through uploading `.wav` files or recording in real-time — and also features an **emotion-aware chatbot** along with a **mood-tracking journal** for **personalized mental wellness support**.
 
@@ -6,7 +6,7 @@ Unlike traditional NLP-based sentiment models, **VibeTrack is sentence-agnostic*
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Real-time microphone emotion detection**
 - **.wav file upload support**
@@ -19,7 +19,7 @@ Unlike traditional NLP-based sentiment models, **VibeTrack is sentence-agnostic*
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 VibeTrack uses **MFCC-based preprocessing** to extract important audio features like:
 
@@ -42,14 +42,14 @@ The chatbot also **keeps conversation memory** so it remembers previous interact
 
 ---
 
-## 🎥 Live Demo
+## Live Demo
 
 - **Find here:**  
 - **Demo video:** [Watch on Google Drive](https://drive.google.com/file/d/1ow1KIWIiqMHQIy5jEuyA1xRvyxLcmsvJ/view?usp=sharing)
 
 ---
 
-## 💡 Why Use VibeTrack?
+## Why Use VibeTrack?
 
 > "We don’t always say what we feel — but our voice does."
 
@@ -57,7 +57,7 @@ VibeTrack acts like a mirror to your emotions. Whether you're working on **menta
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python 3.10+**
 - **Streamlit**
@@ -68,7 +68,7 @@ VibeTrack acts like a mirror to your emotions. Whether you're working on **menta
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 - **Accuracy:** 99.9% on validation set  
 - **Dataset:** Cleaned a large dataset with wide variety of audio files  
