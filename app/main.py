@@ -139,25 +139,28 @@ with tabs[1]:
     st.markdown("### 🎤 Record from Microphone")
     if st.button("Start Recording"):
         file_path = record_audio()
-        st.audio(file_path, format="audio/wav")
-        show_waveform(file_path)
+        if file_path:   
+            st.audio(file_path, format="audio/wav")
+            show_waveform(file_path)
 
-        emotion, prediction = predict_emotion(file_path)
+            emotion, prediction = predict_emotion(file_path)
 
-        st.success(f"✅ Emotion Detected: {emotion.upper()}")
-        st.markdown(
-            f"### 🧠 Detected Emotion: <span style='color:{accent}; font-weight:bold;'>{emotion.upper()}</span>",
-            unsafe_allow_html=True
-        )
+            st.success(f"✅ Emotion Detected: {emotion.upper()}")
+            st.markdown(
+                f"### 🧠 Detected Emotion: <span style='color:{accent}; font-weight:bold;'>{emotion.upper()}</span>",
+                unsafe_allow_html=True
+            )
 
-        with st.expander("💡 Click for personalized suggestions", expanded=True):
-            from utils.suggestions import emotion_reactions
-            for idea in emotion_reactions.get(emotion.lower(), ["💪 Stay strong and take care of yourself."]):
-                st.markdown(f"- {idea}")
+            with st.expander("💡 Click for personalized suggestions", expanded=True):
+                from utils.suggestions import emotion_reactions
+                for idea in emotion_reactions.get(emotion.lower(), ["💪 Stay strong and take care of yourself."]):
+                    st.markdown(f"- {idea}")
 
-        st.markdown("### 📊 Emotion Probabilities")
-        show_confidence_chart(prediction)
-        save_to_journal(emotion, prediction)
+            st.markdown("### 📊 Emotion Probabilities")
+            show_confidence_chart(prediction)
+            save_to_journal(emotion, prediction)
+        else:
+            st.info("⚠️ Microphone recording is not available here. Please upload a file instead.")
 
 with tabs[2]:
     show_journal()
