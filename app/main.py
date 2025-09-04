@@ -80,13 +80,16 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-header_image_path = os.path.join("static", "header_image.png")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+header_image_path = os.path.join(BASE_DIR, "static", "header_image.png")
+
 if os.path.exists(header_image_path):
     with open(header_image_path, "rb") as img_file:
         encoded_img = base64.b64encode(img_file.read()).decode()
     img_html = f"<img src='data:image/png;base64,{encoded_img}' class='hero-image' alt='VibeTrack Banner'>"
 else:
-    img_html = "<div class='hero-image'>[Header image missing]</div>"
+    img_url = "https://raw.githubusercontent.com/vennelavarshini18/YOUR-REPO-NAME/main/static/header_image.png"
+    img_html = f"<img src='{img_url}' class='hero-image' alt='VibeTrack Banner'>"
 
 st.markdown(f"""
     <div class="hero-container">
