@@ -44,7 +44,7 @@ The chatbot also **keeps conversation memory** so it remembers previous interact
 
 ## Live Demo
 
-- **Find here:**  
+- **Find here:**  [Deployed on Streamlit Cloud](https://trackyourmood.streamlit.app/) 
 - **Demo video:** [Watch on Google Drive](https://drive.google.com/file/d/1ow1KIWIiqMHQIy5jEuyA1xRvyxLcmsvJ/view?usp=sharing)
 
 ---
