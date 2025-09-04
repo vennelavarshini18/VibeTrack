@@ -84,17 +84,17 @@ header_image_path = os.path.join("static", "header_image.png")
 if os.path.exists(header_image_path):
     with open(header_image_path, "rb") as img_file:
         encoded_img = base64.b64encode(img_file.read()).decode()
-    img_html = f"<img src='data:image/png;base64,{encoded_img}' class='hero-image' alt='MoodOS Banner'>"
+    img_html = f"<img src='data:image/png;base64,{encoded_img}' class='hero-image' alt='VibeTrack Banner'>"
 else:
     img_html = "<div class='hero-image'>[Header image missing]</div>"
 
 st.markdown(f"""
     <div class="hero-container">
-        <div class="hero-title">🎧 MoodOS</div>
+        <div class="hero-title">🎧 VibeTrack</div>
         {img_html}
         <p class="hero-subtitle">
             Step into a world where your voice speaks louder than words.<br>
-            MoodOS is your emotional mirror, powered by deep learning to help you<br>
+            VibeTrack is your emotional mirror, powered by deep learning to help you<br>
             understand, reflect, and grow — one emotion at a time.
         </p>
     </div>
