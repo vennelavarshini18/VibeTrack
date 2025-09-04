@@ -1,8 +1,10 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2" 
 import numpy as np
 import librosa
 import tensorflow as tf
 import logging
-import os
 
 logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 
@@ -11,7 +13,8 @@ MODEL_PATH = os.path.join(BASE_DIR, "..", "model", "best_model.h5")
 LABEL_PATH = os.path.join(BASE_DIR, "..", "model", "label_classes.npy")
 
 model = tf.keras.models.Sequential([
-    tf.keras.layers.Conv1D(512, kernel_size=5, strides=1, padding='same', activation='relu', input_shape=(2376, 1)),
+    tf.keras.Input(shape=(2376, 1)),  
+    tf.keras.layers.Conv1D(512, kernel_size=5, strides=1, padding='same', activation='relu'),
     tf.keras.layers.BatchNormalization(),
     tf.keras.layers.MaxPooling1D(pool_size=5, strides=2, padding='same'),
 
