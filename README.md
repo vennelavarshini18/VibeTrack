@@ -6,6 +6,11 @@ Unlike traditional NLP-based sentiment models, **VibeTrack is sentence-agnostic*
 
 ---
 
+## Documentation
+ - **DOCUMENTATION** : [Google Docs](https://docs.google.com/document/d/1NRAnSWmeb2uLy2gNMw9GGrdpRaMD2gkVlX_S1khh0ZA/edit?usp=sharing)
+   
+---
+
 ## Features
 
 - **Real-time microphone emotion detection**
