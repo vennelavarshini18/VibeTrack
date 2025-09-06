@@ -75,4 +75,5 @@ VibeTrack acts like a mirror to your emotions. Whether you're working on **menta
 - **Preprocessing:** MFCCs with zero-padding and time-frequency normalization  
 - **Architecture:** Custom 1D CNN with dropout and batch normalization layers  
 
+- **NOTEBOOK LINK:** [Watch on Google Colab](https://colab.research.google.com/drive/1yS6nrDhy8DZhQF4Acub2UA3gfuzBuMth?usp=sharing)
 ---
